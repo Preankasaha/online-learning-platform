@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Register = () => {
+const FAQ = () => {
     return (
         <div>
-            register
+            faq
         </div>
     );
 };
 
-export default Register;
+export default FAQ;
