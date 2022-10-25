@@ -2,12 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import Blog from "../../pages/Blog/Blog";
 import Courses from "../../pages/Courses/Courses";
+
 import FAQ from "../../pages/FAQ/FAQ";
 import Option from "../../pages/Option/Option";
 import LogIn from "../../pages/Register&LogIn/LogIn/LogIn";
 import Registration from "../../pages/Register&LogIn/Registration/Registration";
 
-;
+
 
 export const routes = createBrowserRouter([
     {
@@ -16,13 +17,15 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Courses></Courses>
+                element: <Courses></Courses>,
+                loader: () => fetch(`http://localhost:5000/courses`)
+
             },
 
-            {
-                path: '/option/:id',
-                element: <Option></Option>
-            },
+            // {
+            //     path: '/option/:id',
+            //     element: <Option></Option>
+            // },
 
             {
                 path: '/faq',
@@ -41,7 +44,8 @@ export const routes = createBrowserRouter([
             {
                 path: '/login',
                 element: <LogIn></LogIn>
-            },
+            }
+
         ]
     }
 ])

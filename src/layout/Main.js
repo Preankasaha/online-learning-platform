@@ -10,15 +10,17 @@ const Main = () => {
         <div>
             <Header></Header>
 
-            <div className='grid grid-cols-4 gap-4'>
-                <div className='border-2 border-sky-100'>
-                    <SideNav></SideNav>
+            <div className='bg-gray-500 mr-4 ml-4'>
+                <div className='grid grid-cols-3 gap-8'>
+                    <div className='col-span-1'>
+                        <SideNav></SideNav>
 
-                </div>
-                <div className='grid col-span-3 gap-4 border-2 border-sky-100'>
-                    <Courses></Courses>
-                </div>
+                    </div>
 
+                    <div className='col-span-2'>
+                        <Outlet></Outlet>
+                    </div>
+                </div>
             </div>
         </div>
     );
