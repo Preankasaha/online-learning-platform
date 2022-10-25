@@ -7,6 +7,7 @@ import FAQ from "../../pages/FAQ/FAQ";
 import Option from "../../pages/Option/Option";
 import LogIn from "../../pages/Register&LogIn/LogIn/LogIn";
 import Registration from "../../pages/Register&LogIn/Registration/Registration";
+import CourseDetails from "../../pages/Shared/CourseDetails/CourseDetails";
 
 
 
@@ -22,10 +23,12 @@ export const routes = createBrowserRouter([
 
             },
 
-            // {
-            //     path: '/option/:id',
-            //     element: <Option></Option>
-            // },
+
+            {
+                path: '/courses/:id',
+                element: <CourseDetails></CourseDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+            },
 
             {
                 path: '/faq',
