@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Registration = () => {
-
+    const [error, setError] = useState();
     const { user, createUser } = useContext(AuthContext);
-    
+
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
@@ -21,9 +21,14 @@ const Registration = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                form.reset();
+                setError('');
 
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error);
+                setError(error.message);
+            })
     }
 
     return (
@@ -61,15 +66,15 @@ const Registration = () => {
                                 <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                                 <label className="label">
 
-                                    <Link to='/login' className="label-text-alt link link-hover">Already have an account? Sign In</Link>
+                                    <Link to='/login' className="label-text-alt link link-hover text-xl">Already have an account? Sign In</Link>
                                 </label>
                             </div>
+                            <div> {error} </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
                             </div>
                         </form>
-                        {/* onClick={handleGoogleSignIn} */}
-                        <button className="btn btn-outline btn-success">Sign In With Google</button>
+
                     </div>
                 </div>
             </div>

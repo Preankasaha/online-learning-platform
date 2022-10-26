@@ -39,7 +39,9 @@ const Header = () => {
 
                     {
                         user?.uid ?
-                            <Link onClick={handleLogOut} to='/login' className="btn btn-outline btn-accent text-xl">Sign Out</Link>
+                            <>
+                                <Link onClick={handleLogOut} to='/login' className="btn btn-outline btn-accent text-xl">Sign Out</Link>
+                            </>
                             :
                             <>
                                 <Link to='/registration' className="btn btn-outline btn-accent text-xl mx-2">Registration</Link>
