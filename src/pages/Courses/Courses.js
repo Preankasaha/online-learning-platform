@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CourseSummary from '../Shared/CourseSummary/CourseSummary';
+import SideNav from '../Shared/SideNav/SideNav';
 
 
 const Courses = () => {
@@ -15,11 +16,21 @@ const Courses = () => {
     // }
     //     , [])
     return (
-        
-        <div className='grid grid-cols-2 gap-x-4 ml-8 mr-8'>
-            {courses.map(course => <CourseSummary key={course.id} course={course}></CourseSummary>)}
 
+        <div className='mx-4'>
+            <div className='flex sm:flex-none gap-8'>
+                <div className='w-1/4'><SideNav></SideNav></div>
+                {/* grid grid-cols-3 col-span-2 */}
+                <div className='w-3/4'>
+                    <div className='md:grid grid-cols-2 gap-x-4 md:ml-8 md:mr-8'>
+                        {courses.map(course => <CourseSummary key={course.id} course={course}></CourseSummary>)}
+
+                    </div>
+                </div>
+
+            </div>
         </div>
+
     );
 };
 

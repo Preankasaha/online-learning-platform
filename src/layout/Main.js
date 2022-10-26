@@ -10,19 +10,10 @@ const Main = () => {
         <div>
             <Header></Header>
 
-            <div className='bg-gray-500 mr-4 ml-4'>
-                <div className='grid grid-cols-3 gap-2'>
-                    <div className='col-span-1'>
-                        <SideNav></SideNav>
+            <Outlet></Outlet>
 
-                    </div>
-
-                    <div className='col-span-2'>
-                        <Outlet></Outlet>
-                    </div>
-                </div>
-            </div>
         </div>
+
     );
 };
 

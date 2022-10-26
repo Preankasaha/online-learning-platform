@@ -7,6 +7,7 @@ const Registration = () => {
     const [error, setError] = useState();
     const { user, createUser } = useContext(AuthContext);
 
+
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
@@ -45,34 +46,34 @@ const Registration = () => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" name='name' placeholder="userName" className="input input-bordered" />
+                                <input type="text" name='name' placeholder="Enter Full Name" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">PhotoURL</span>
                                 </label>
-                                <input type="text" name='photoURL' placeholder="Enter your photoURL" className="input input-bordered" />
+                                <input type="text" name='photoURL' placeholder="Enter photoURL" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                                <input type="email" name='email' placeholder="Enter email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text" name='password'>Password</span>
                                 </label>
-                                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                                <input type="password" name='password' placeholder="Enter password" className="input input-bordered" required />
                                 <label className="label">
-
-                                    <Link to='/login' className="label-text-alt link link-hover text-xl">Already have an account? Sign In</Link>
+                                    <Link to='/login' className="label-text-alt link link-hover text-xl">Already have an account! Sign In now</Link>
                                 </label>
                             </div>
                             <div> {error} </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Register</button>
+                                <button className="btn btn-accent">Register</button>
                             </div>
+
                         </form>
 
                     </div>
