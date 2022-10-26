@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
 
 const LogIn = () => {
+
+
     return (
         <div>
-            login
+            log
         </div>
+
     );
 };
 

@@ -4,7 +4,7 @@ import Blog from "../../pages/Blog/Blog";
 import Courses from "../../pages/Courses/Courses";
 
 import FAQ from "../../pages/FAQ/FAQ";
-import Option from "../../pages/Option/Option";
+
 import LogIn from "../../pages/Register&LogIn/LogIn/LogIn";
 import Registration from "../../pages/Register&LogIn/Registration/Registration";
 import CourseDetails from "../../pages/Shared/CourseDetails/CourseDetails";
@@ -40,7 +40,7 @@ export const routes = createBrowserRouter([
             },
 
             {
-                path: '/register',
+                path: '/registration',
                 element: <Registration></Registration>
             },
 

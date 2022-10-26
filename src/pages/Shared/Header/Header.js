@@ -25,12 +25,17 @@ const Header = () => {
                         <Link to='/blog'>Blog</Link>
                     </ul>
                 </div>
+
                 <div className="navbar-end">
-                    <div><Link className="btn btn-outline btn-accent text-xl">Sign In</Link></div>
+                    <div className='mx-2'>
+                        <Link to='/registration' className="btn btn-outline btn-accent text-xl">Registration</Link>
+                    </div>
+                    <div><Link to='/login' className="btn btn-outline btn-accent text-xl">Sign In</Link>
+                    </div>
+
+
                 </div>
-                <div className='mx-2'>
-                    <Link className="btn btn-outline btn-accent text-xl">Registration</Link>
-                </div>
+
 
             </div>
         </div>

@@ -15,6 +15,7 @@ const Courses = () => {
     // }
     //     , [])
     return (
+        
         <div className='grid grid-cols-2 gap-x-4 ml-8 mr-8'>
             {courses.map(course => <CourseSummary key={course.id} course={course}></CourseSummary>)}
 
