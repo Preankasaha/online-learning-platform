@@ -10,6 +10,7 @@ import LogIn from "../../pages/Register&LogIn/LogIn/LogIn";
 import Registration from "../../pages/Register&LogIn/Registration/Registration";
 import CourseDetails from "../../pages/Shared/CourseDetails/CourseDetails";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
+import ErrorPage from "../../pages/ErrorPage/ErrorPage";
 
 
 
@@ -17,6 +18,7 @@ export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: '/',
