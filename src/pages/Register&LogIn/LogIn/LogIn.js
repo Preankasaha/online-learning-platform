@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const LogIn = () => {
+    const [error, setError] = useState();
     const { user, signIn } = useContext(AuthContext);
 
     const handleSubmit = event => {
@@ -17,9 +18,12 @@ const LogIn = () => {
             .then(result => {
                 const user = result.user
                 console.log(user);
+                form.reset();
+                setError('');
             })
             .catch(error => {
                 console.error(error);
+                setError(error.message)
 
             })
     }
@@ -49,6 +53,7 @@ const LogIn = () => {
                                 <Link href="#" className="label-text-alt link link-hover">Forgot password?</Link>
                             </label>
                         </div>
+                        <div> {error} </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Sign In</button>
                         </div>
