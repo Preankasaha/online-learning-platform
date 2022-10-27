@@ -39,7 +39,7 @@ const Blog = () => {
 
             </div>
 
-            <div className="collapse">
+            <div className="collapse mb-5">
                 <input type="checkbox" />
                 <div className="collapse-title text-xl font-medium bg-neutral text-white">
                     What is Node? How does Node work?

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter'
-const Home = () => {
 
+const Home = () => {
+   
     return (
 
         <div className='md:flex flex-row w-100% gap-x-48 justify-center items-center  text-blue-800 bg-accent p-3.5'>
@@ -39,6 +40,7 @@ const Home = () => {
                     data-aos-duration="1500"
                 />
             </div>
+            
 
         </div>
     );
