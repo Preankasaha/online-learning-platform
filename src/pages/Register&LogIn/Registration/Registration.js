@@ -5,7 +5,7 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Registration = () => {
     const [error, setError] = useState();
-    const { user, createUser } = useContext(AuthContext);
+    const { user, createUser, updateUserProfile } = useContext(AuthContext);
 
 
     const handleSubmit = e => {
@@ -23,15 +23,26 @@ const Registration = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
+                handleUpdateUserProfile(name, photoURL)
                 setError('');
-
             })
             .catch(error => {
                 console.error(error);
                 setError(error.message);
             })
     }
-
+    const handleUpdateUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => {
+                console.error(error)
+                setError(error.message);
+            });
+    }
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">

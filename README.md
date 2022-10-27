@@ -9,23 +9,31 @@ This project will serve as an online learning/tutorial application. React app is
 
 The site has a navbar with courses router. There are 6 courses primarily included to this site. clicking the course router will take you to the options with course summary card. clicking the button on course summary card will lead to course details area. User will get here detail information about the course selected. To acces each courses, user will need to click the get premiun button on each course of the course details area. Note that, get premium access is restrcited to any unauthorized user.    
 
+### Technologies
+React
+React Router
+Firebase
+Tailwind
+DaisyUI
+TypeWriteer effect
+React Icon
+React-PDF
 
-### API Reference
+#### API Reference
+https://e-learning-server-kappa.vercel.app/courses
 
-#### Livesite Link
+https://e-learning-server-kappa.vercel.app/courses/id
+example: https://e-learning-server-kappa.vercel.app/courses/1
+
+##### Livesite Link
 
 
-##### Deployment
+###### Deployment
 
-The project is deployed at app.netlify.com. build file is made before deploying using 
+The project is deployed at firebase. build file is made before deploying using 
   
   npm run build
 
-To avoid netlify 404 page not found, _redirects file containing
-
-/* /index.html 200
-
-is created.
 
 
 

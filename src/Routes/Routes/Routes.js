@@ -11,6 +11,7 @@ import Registration from "../../pages/Register&LogIn/Registration/Registration";
 import CourseDetails from "../../pages/Shared/CourseDetails/CourseDetails";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import ErrorPage from "../../pages/ErrorPage/ErrorPage";
+import Home from "../../pages/Home/Home";
 
 
 
@@ -20,22 +21,27 @@ export const routes = createBrowserRouter([
         element: <Main></Main>,
         errorElement: <ErrorPage />,
         children: [
+        
             {
                 path: '/',
-                element: <Courses></Courses>,
-                loader: () => fetch(`http://localhost:5000/courses`)
-
+                element: <Home></Home>,
+            
             },
-
+            
+            {
+                path: '/courses',
+                element: <Courses></Courses>,
+                loader: () => fetch(`https://e-learning-server-kappa.vercel.app/courses`)
+            },
             {
                 path: '/courses/:id',
                 element: <CourseDetails></CourseDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://e-learning-server-kappa.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/checkout/:id',
                 element: <PrivateRoutes><CheckOut></CheckOut></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://e-learning-server-kappa.vercel.app/courses/${params.id}`)
             },
 
             {

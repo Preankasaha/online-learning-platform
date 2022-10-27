@@ -8,7 +8,10 @@ const CheckOut = () => {
     return (
         <div className='mx-4 my-8'>
 
-            <div className="card w-full bg-accent text-dark">
+            <div className="card w-full bg-accent text-dark"
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
                 <div className="card-body">
                     <p className='text-2xl font-bold'>Welcome!!! You have successfully enrolled for {name} course.</p>
                     <p className='text-xl'>Detail Info is here:</p>
@@ -17,7 +20,9 @@ const CheckOut = () => {
                     <p className='text-xl font-bold'>You have paid: {price}</p>
                 </div>
             </div>
+
         </div>
+
     );
 };
 

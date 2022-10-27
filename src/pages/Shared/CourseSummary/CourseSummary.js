@@ -8,7 +8,9 @@ const CourseSummary = ({ course }) => {
 
     return (
         <div className='grid cols-span-2 my-8'>
-            <div className="card w-96 glass bg-base-100 shadow-xl shadow-violet-800 image-full border-none">
+            <div className="card md:w-96 bg-base-800 shadow-xl hover:shadow-2xl shadow-fuchsia-300 hover:shadow-amber-500 image-full border-none" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
                 <figure><img src={image} alt="" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-2xl font-bold tracking-wide">Course Title: {name}</h2>

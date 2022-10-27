@@ -95,9 +95,14 @@ const LogIn = () => {
                         <div className="form-control mt-6">
                             <button onClick={handleGithubSignIn} className="btn btn-accent">Sign In With Github</button>
                         </div>
-                        <label className="label">
-                            <Link to='/registration' className="label-text-alt link link-hover text-xl">New to this site! Plz Register first</Link>
-                        </label>
+                        <div className='flex'>
+                           
+                            <label className="label">
+                            <span>New to this site! Plz</span>
+                                <Link to='/registration' className="label-text-alt link link-hover text-xl bg-accent ml-2 rounded">Register</Link>
+                            </label>
+                        </div>
+
 
                     </form>
                 </div>

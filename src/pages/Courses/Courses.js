@@ -17,11 +17,11 @@ const Courses = () => {
     //     , [])
     return (
 
-        <div className='mx-4'>
-            <div className='flex sm:flex-none gap-8'>
-                <div className='w-1/4'><SideNav></SideNav></div>
+        <div className='md:mx-4 my-4  bg-slate-500'>
+            <div className='flex-none md:flex  gap-8'>
+                <div className='w-full md:w-1/4'><SideNav></SideNav></div>
                 {/* grid grid-cols-3 col-span-2 */}
-                <div className='w-3/4'>
+                <div className='md:w-3/4'>
                     <div className='md:grid grid-cols-2 gap-x-4 md:ml-8 md:mr-8'>
                         {courses.map(course => <CourseSummary key={course.id} course={course}></CourseSummary>)}
 
