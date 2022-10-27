@@ -46,7 +46,7 @@ const Header = () => {
                         }
                     </ul>
                 </div>
-                <img src='https://png.pngtree.com/png-vector/20190719/ourmid/pngtree-e-learning-line-icon-online-internet-education-symbol-graduation-png-image_1550378.jpg' className='bg-accent text-accent w-8 md:w-14 rounded-full'></img>
+                <img className='bg-accent text-accent w-4 md:w-14 rounded-full' src='https://w7.pngwing.com/pngs/21/302/png-transparent-presentation-diagram-brand-e-learning-text-service-presentation-thumbnail.png'></img>
                 <Link to='/' className="btn btn-ghost hover:btn-accent normal-case md:text-2xl">e-Learning</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
