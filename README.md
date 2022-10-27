@@ -1,3 +1,35 @@
+# Project Title
+
+e-Learning
+
+
+## Project Description
+
+This project will serve as an online learning/tutorial application. React app is used for this project. React router dom is used for availing dynamic routing facilities bestowed by the react library.Basically, React, react router dom, tailwindcss and daisyUI, firebase are used for the project. Along with these, packages like react react-pdf, react icon, aos react are used to facilate the users' interaction.
+
+The site has a navbar with courses router. There are 6 courses primarily included to this site. clicking the course router will take you to the options with course summary card. clicking the button on course summary card will lead to course details area. User will get here detail information about the course selected. To acces each courses, user will need to click the get premiun button on each course of the course details area. Note that, get premium access is restrcited to any unauthorized user.    
+
+
+### API Reference
+
+#### Livesite Link
+
+
+##### Deployment
+
+The project is deployed at app.netlify.com. build file is made before deploying using 
+  
+  npm run build
+
+To avoid netlify 404 page not found, _redirects file containing
+
+/* /index.html 200
+
+is created.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
