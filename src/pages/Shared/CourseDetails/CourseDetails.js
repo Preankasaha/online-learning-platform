@@ -6,7 +6,7 @@ import Pdf from "react-to-pdf";
 const ref = React.createRef();
 const CourseDetails = () => {
     const checkout = useLoaderData();
- 
+
     const { name, description, duration, image, lesson, price, rating } = checkout;
 
     return (
@@ -16,6 +16,8 @@ const CourseDetails = () => {
                 {({ toPdf }) => <button className='btn btn-accent' onClick={toPdf}>Generate Pdf</button>}
                 {/* <div style={{ width: 500, height: 500, background: 'blue' }} ref={ref} /> */}
             </Pdf>
+
+            <h2 className='text-xl font-bold'>Details of our {name} course</h2>
             <div className='my-5 ml-4 mr-4'>
                 <div className="card lg:card-side bg-base-100 shadow-xl"
                     data-aos="zoom-in"
