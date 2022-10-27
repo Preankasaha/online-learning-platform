@@ -19,20 +19,20 @@ TypeWriteer effect
 React Icon
 React-PDF
 
-#### API Reference
+#### Livesite Link
+
+https://e-learning-faad3.web.app/faq
+
+#####  API Reference
 https://e-learning-server-kappa.vercel.app/courses
 
 https://e-learning-server-kappa.vercel.app/courses/id
 example: https://e-learning-server-kappa.vercel.app/courses/1
 
-##### Livesite Link
-
 
 ###### Deployment
 
-The project is deployed at firebase. build file is made before deploying using 
-  
-  npm run build
+The livesite project is deployed at firebase. The project file is kept stored at github
 
 
 
