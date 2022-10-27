@@ -88,15 +88,19 @@ const Registration = () => {
                                     <span className="label-text" name='password'>Password</span>
                                 </label>
                                 <input type="password" name='password' placeholder="Enter password" className="input input-bordered" required />
-                                <label className="label">
-                                    <Link to='/login' className="label-text-alt link link-hover text-xl">Already have an account! Sign In now</Link>
-                                </label>
+
                             </div>
                             <div> {error} </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-accent">Register</button>
                             </div>
-
+                            {/* <label className="label">
+                                <Link to='/login' className="label-text-alt link link-hover text-xl">cSign In now</Link>
+                            </label> */}
+                            <label className="label">
+                                <span>Already have an account! Plz</span>
+                                <Link to='/registration' className="label-text-alt link link-hover text-xl bg-accent rounded">Register</Link>
+                            </label>
                         </form>
 
                     </div>
