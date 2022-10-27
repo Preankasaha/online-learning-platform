@@ -14,11 +14,11 @@ const SideNav = () => {
     }, [])
     return (
         <div className='bg-neutral text-2xl font-semibold text-accent pl-24 h-96 md:h-full pt-8'>
-            {/* Total courses: {courses.length}; */}
+
             {
                 courses.map(course => <p
                     key={course.id}>
-                    <Link to={`/courses/${course.id}`} className='leading-10 md:py-32'>{course.name}</Link>
+                    <Link to={`/courses/${course.id}`}>{course.name}</Link>
                 </p>)
             }
 

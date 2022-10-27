@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
     const [error, setError] = useState();
@@ -15,6 +17,15 @@ const Registration = () => {
         const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
+        if (!/(?=.*[A-Z])/.test(password)) {
+            toast.error('please provide at least one uppercase letter')
+            return;
+        }
+        if (!/(?=.*[!@#$&*])/.test(password)) {
+            toast.error('please provide at least one special character')
+            return;
+        }
+
         console.log(name, photoURL, email, password)
 
         //registration
@@ -24,6 +35,7 @@ const Registration = () => {
                 console.log(user);
                 form.reset();
                 handleUpdateUserProfile(name, photoURL)
+
                 setError('');
             })
             .catch(error => {
@@ -55,7 +67,7 @@ const Registration = () => {
                         <form onSubmit={handleSubmit} className="card-body">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
+                                    <span className="label-text">Fullname</span>
                                 </label>
                                 <input type="text" name='name' placeholder="Enter Full Name" className="input input-bordered" />
                             </div>
@@ -90,6 +102,7 @@ const Registration = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

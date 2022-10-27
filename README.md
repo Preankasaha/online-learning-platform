@@ -17,6 +17,7 @@ Tailwind
 DaisyUI
 TypeWriteer effect
 React Icon
+React toastify
 React-PDF
 
 #### Livesite Link
@@ -29,7 +30,7 @@ https://e-learning-server-kappa.vercel.app/courses
 https://e-learning-server-kappa.vercel.app/courses/id
 example: https://e-learning-server-kappa.vercel.app/courses/1
 
-
+https://e-learning-server-kappa.vercel.app/course-options
 ###### Deployment
 
 The livesite project is deployed at firebase. The project file is kept stored at github
