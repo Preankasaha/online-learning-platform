@@ -7,15 +7,19 @@ import { FaUser } from 'react-icons/fa';
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
     const [text, setText] = useState('light');
-
+    const [error, setError] = useState();
     const handleLogOut = () => {
         logOut()
             .then(() => { })
-            .catch(error => console.error(error))
+            .catch(error => {
+                // console.error(error)
+                setError(error.message);
+            })
+
     }
 
     const handleToggle = () => {
-        text === 'light' ?
+        text === 'Light' ?
             setText('dark')
             :
             setText('light')

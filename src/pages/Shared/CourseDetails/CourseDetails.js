@@ -6,7 +6,7 @@ import Pdf from "react-to-pdf";
 const ref = React.createRef();
 const CourseDetails = () => {
     const checkout = useLoaderData();
-    console.log(checkout);
+ 
     const { name, description, duration, image, lesson, price, rating } = checkout;
 
     return (

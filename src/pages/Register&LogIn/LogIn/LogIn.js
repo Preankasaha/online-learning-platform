@@ -17,21 +17,21 @@ const LogIn = () => {
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
-        console.log(form);
+        
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+       
 
         signIn(email, password)
             .then(result => {
                 const user = result.user
-                console.log(user);
+                
                 form.reset();
                 setError('');
                 navigate(from, { replace: true });
             })
             .catch(error => {
-                console.error(error);
+               
                 setError(error.message)
 
             })
@@ -42,9 +42,12 @@ const LogIn = () => {
         providerSignIn(googleProvider)
             .then(result => {
                 const user = result.user
-                console.log(user)
+               
                 navigate(from, { replace: true });
-            }).catch(error => console.error(error))
+            }).catch(error => {
+                // console.error(error)
+                setError(error.message);
+            })
     }
 
     // sign in with github
@@ -52,9 +55,12 @@ const LogIn = () => {
         providerSignIn(githubProvider)
             .then(result => {
                 const user = result.user
-                console.log(user)
+                
                 navigate(from, { replace: true });
-            }).catch(error => console.error(error))
+            }).catch(error => {
+                // console.error(error)
+                setError(error.message);
+            })
     }
     return (
 
